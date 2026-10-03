@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int add(int a, int b) { return a + b; }
+int subtract(int a, int b) { return a - b; }
+int multiply(int a, int b) { return a * b; }
+
+double divide(int a, int b) {
+    return (double)a / b;
+}
+
+int modulus(int a, int b) {
+    return a % b;
+}
+
+int main(void) {
+    int a, b;
+
+    printf("Enter two integers: ");
+    scanf("%d %d", &a, &b);
+
+    printf("Addition = %d\n", add(a, b));
+    printf("Subtraction = %d\n", subtract(a, b));
+    printf("Multiplication = %d\n", multiply(a, b));
+
+    if (b != 0) {
+        printf("Division = %.2f\n", divide(a, b));
+        printf("Modulus = %d\n", modulus(a, b));
+    } else {
+        printf("Division by zero is not possible.\n");
+        printf("Modulus by zero is not possible.\n");
+    }
+
+    return 0;
+}
